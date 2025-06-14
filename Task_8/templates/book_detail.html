@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }} | დეტალები{% endblock %}
+
+{% block content %}
+<h2>{{ book.title }}</h2>
+<p><strong>ავტორი:</strong> {{ book.author }}</p>
+<p><strong>აღწერა:</strong> {{ book.description }}</p>
+<a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">← უკან დაბრუნება</a>
+{% endblock %}

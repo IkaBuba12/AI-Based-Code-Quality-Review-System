@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}მთავარი | ბიბლიოთეკა{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">წიგნების სია</h1>
+<div class="list-group">
+  {% for book in books %}
+    <a href="{{ url_for('book_detail', book_id=book.id) }}" class="list-group-item list-group-item-action">
+      <strong>{{ book.title }}</strong> - {{ book.author }}
+    </a>
+  {% endfor %}
+</div>
+{% endblock %}
